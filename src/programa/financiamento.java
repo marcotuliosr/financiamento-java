@@ -9,6 +9,20 @@ public class financiamento {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 
+		String nome;
+		double salario;
+		
+		System.out.println("DIGITE OS DADOS DO FINANCIAMENTO");
+		System.out.print("Nome do Cliente: ");
+		nome = sc.nextLine();
+		System.out.print("Salario: ");
+		salario = sc.nextDouble();
+		
+		while ( salario < 0) {
+			System.out.print("O salario nao pode ser negativo. Tente Novamente: ");
+			salario = sc.nextDouble();
+		}
+		
 		sc.close();
 	}
 
